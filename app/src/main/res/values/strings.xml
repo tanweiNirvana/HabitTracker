@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Habit Tracker</string>
+    <string name="table_name">habit</string>
+    <string name="create_data">添加数据</string>
+    <string name="update_data">更新数据</string>
+    <string name="delete_data">删除数据</string>
+    <string name="display_data">显示数据</string>
+    <string name="Walk_the_dog">遛狗</string>
+    <string name="saxophone">吹萨克斯</string>
+    <string name="Program">编程</string>
+</resources>
