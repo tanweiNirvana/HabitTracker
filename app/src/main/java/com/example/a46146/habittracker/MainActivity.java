@@ -89,10 +89,16 @@ public class MainActivity extends AppCompatActivity {
         db.update(TABLE_NAME, values, COLUMN_HABIT_NAME + " = ?", new String[]{getString(R.string.Program)});
     }
 
-    //retrieve database
-    private void retrieveDB() {
+    //read All Habits
+    public Cursor readAllHabits() {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.query(TABLE_NAME, null, null, null, null, null, null);
+        return cursor;
+    }
+
+    //retrieve database
+    private void retrieveDB() {
+        Cursor cursor = readAllHabits();
         if (cursor.moveToFirst()) {
             do {
                 String name = cursor.getString(cursor.getColumnIndex(COLUMN_HABIT_NAME));
